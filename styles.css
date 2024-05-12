@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    transition: background-color 0.5s;
+}
+
+        .logo {
+            width: 600px; /* Adjust the width as needed */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+            border: px solid #ccc; /* Add a border to make it look like a card */
+            border-radius: 20px; /* Optional: Add border-radius for rounded corners */
+        }
+
+.sidebar {
+    height: 100vh;
+    width: 250px; /* Set an appropriate width */
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    left: 0; /* Change to 0 to show sidebar initially or on sidebar open */
+    top: 0;
+    overflow-x: hidden;
+    transition: left 0.5s; /* Smooth transition for the left property */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+    display: block; /* Change to block to make links visible */
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+.menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+    padding: 20px;
+    transition: color 0.3s;
+}
+
+.menu-icon:hover {
+    color: #555;
+}
+
+.menu-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px; /* Adjust the width of the indicator line */
+    height: 12px; /* Adjust the height of the indicator line */
+    background-color: #333; /* Adjust the color of the indicator line */
+    transition: transform 0.3s ease;
+}
+
+.menu-icon.expanded::after {
+    transform: translate(-50%, -50%) rotate(90deg); /* Rotate the indicator when expanded */
+}
+
+
+
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 0; /* Initially set the margin to 0 */
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.5s;
+}
+
+.header, .content, .projects, .portfolio, footer {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Initially set the left to 0 */
+    width: 100%; /* Initially set the width to 100% */
+    padding: 10px;
+    transition: background-color 0.5s;
+}
+
+.footer-links {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+.footer-links a {
+            color: #555;
+            text-decoration: none;
+        }
+
+footer:hover {
+    background-color: #555;
+}
+
+.container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.header h1 {
+
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    font-weight: 700; /* Bold font weight */
+    font-size: 30px; /* Font size */
+    color: #333; /* Text color */
+
+        }
