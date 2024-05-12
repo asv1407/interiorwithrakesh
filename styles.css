@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -9,20 +10,52 @@ body {
     transition: background-color 0.5s;
 }
 
-        .logo {
-            width: 600px; /* Adjust the width as needed */
-            height: auto; /* Automatically adjust the height to maintain aspect ratio */
-            border: px solid #ccc; /* Add a border to make it look like a card */
-            border-radius: 20px; /* Optional: Add border-radius for rounded corners */
-        }
+/* Logo styles */
+.logo {
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    border: 1px solid #ccc; /* Add a 1-pixel solid border */
+    border-radius: 20px; /* Optional: Add border-radius for rounded corners */
+}
 
+/* Menu icon styles */
+.menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+    padding: 20px;
+    transition: color 0.3s;
+    position: relative; /* Ensure proper positioning for the indicator lines */
+}
+
+.menu-icon:hover {
+    color: #555;
+}
+
+.menu-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 12px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon.expanded::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Sidebar styles */
 .sidebar {
     height: 100vh;
     width: 250px; /* Set an appropriate width */
     background-color: #333;
     color: #fff;
     position: fixed;
-    left: 0; /* Change to 0 to show sidebar initially or on sidebar open */
+    left: -250px; /* Initially hide the sidebar */
     top: 0;
     overflow-x: hidden;
     transition: left 0.5s; /* Smooth transition for the left property */
@@ -37,41 +70,12 @@ body {
     color: white;
     transition: background-color 0.3s;
 }
-.menu-icon {
-    cursor: pointer;
-    font-size: 30px;
-    padding: 20px;
-    transition: color 0.3s;
-}
-
-.menu-icon:hover {
-    color: #555;
-}
-
-.menu-icon::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2px; /* Adjust the width of the indicator line */
-    height: 12px; /* Adjust the height of the indicator line */
-    background-color: #333; /* Adjust the color of the indicator line */
-    transition: transform 0.3s ease;
-}
-
-.menu-icon.expanded::after {
-    transform: translate(-50%, -50%) rotate(90deg); /* Rotate the indicator when expanded */
-}
-
-
-
 
 .sidebar a:hover {
     background-color: #555;
 }
 
+/* Main content styles */
 .main-content {
     margin-left: 0; /* Initially set the margin to 0 */
     padding: 20px;
