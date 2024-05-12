@@ -21,7 +21,6 @@ body {
 /* Menu icon styles */
 .menu-icon {
     cursor: pointer;
-    position: fixed;
     font-size: 30px;
     padding: 20px;
     transition: color 0.3s;
