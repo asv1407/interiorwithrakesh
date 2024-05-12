@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var sidebar = document.querySelector('.sidebar');
-    var menuIcon = document.querySelector('.menu-icon');
-    
-    menuIcon.addEventListener('click', function() {
-        var sidebarStyle = getComputedStyle(sidebar); // Get the computed style
-        var sidebarLeft = sidebarStyle.getPropertyValue('left'); // Get the 'left' property value
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        var menuIcon = document.querySelector('.menu-icon');
+        var sidebarStyle = getComputedStyle(sidebar);
+        var sidebarLeft = sidebarStyle.getPropertyValue('left');
 
         if (sidebarLeft === '-250px') {
-            sidebar.style.left = '0px'; // Open the sidebar
-            menuIcon.classList.add('expanded'); // Add a class for the expanded state
+            sidebar.style.left = '0px';
+            menuIcon.classList.add('expanded');
         } else {
-            sidebar.style.left = '-250px'; // Close the sidebar
-            menuIcon.classList.remove('expanded'); // Remove the expanded class
+            sidebar.style.left = '-250px';
+            menuIcon.classList.remove('expanded');
         }
-    });
+    }
+
+    // Other JavaScript code as needed
 });
