@@ -1,0 +1,215 @@
+/* Reset some default styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 18px; /* Slightly larger font size */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+/* Define the Milian Ciarsa font using @font-face */
+@font-face {
+  font-family: 'Milian Ciarsa';
+  src: url('path/to/milian-ciarsa-font.woff2') format('woff2'), /* Specify the path to your font files */
+       url('path/to/milian-ciarsa-font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the Milian Ciarsa font to the h1 tag */
+h1 {
+  font-family: 'Milian Ciarsa', cursive; /* Use the Milian Ciarsa font for h1 */
+  font-size: 36px; /* Adjust the font size as needed */
+  text-align: center; /* Center the text horizontally */
+}
+
+/* Additional styles for h6 */
+h6 {
+  font-size: 20px; /* Change the font size to 20px or any other desired value */
+  text-align: center; /* Center the text horizontally */
+}
+
+
+/* Sidebar styles */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #222;
+  transition: left 0.3s ease;
+  overflow-y: auto; /* Ensures content is scrollable */
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 20px 0; /* Added padding for spacing */
+}
+
+#sidebar ul li {
+  padding: 15px;
+  border-top: 1px solid #333;
+}
+
+#sidebar ul li:first-child {
+  border-top: none;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+  color: #ccc;
+}
+
+
+/* Button styles */
+.close-btn,
+.menu-btn {
+  position: absolute;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close-btn {
+  top: 10px;
+  right: 10px;
+}
+
+.menu-btn {
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 0; /* Initially set the margin to 0 */
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.5s;
+}
+
+/* Logo styles */
+.logo {
+  width: 570px; /* Set the width of the logo */
+  height: 200px; /* Automatically adjust the height to maintain aspect ratio */
+  border: 1px solid #000; /* Add a 1-pixel solid black border */
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+
+/* Common card styles */
+.header,
+.content,
+.projects,
+.portfolio,
+footer {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right : 0; /* Initially set the left to 0 */
+    width: 97%; /* Initially set the width to 100% */
+    padding: 10px;
+    transition: background-color 0.5s;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+footer:hover {
+  background-color: #555;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Contact section styles */
+.contact-section {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.social-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+  }
+  
+  footer {
+    width: 100%;
+  }
+}
